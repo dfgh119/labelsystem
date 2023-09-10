@@ -1,0 +1,46 @@
+import pandas as pd
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
+
+Tk().withdraw()
+filename = askopenfilename(initialdir=".")
+
+# 엑셀 파일을 읽어옵니다.
+df = pd.read_excel(filename)
+
+# 사용자가 원하는 조건 열과 값을 지정합니다.
+조건_열 = '조건_열_이름'
+조건_값 = '조건_값'
+
+# 조건에 맞는 행을 선택합니다.
+조건에_맞는_행 = df[df[조건_열] == 조건_값]
+
+# 결과를 출력합니다.
+print("조건에 맞는 행:")
+print(조건에_맞는_행)
+
+
+for i in input_sheet:
+    for j in sheet_list:
+        if i == j:
+            print("중복된 시트명이 있습니다.")
+            main 진행
+
+
+
+# data_frame에서 사용할 sheet를 선택합니다.
+# sheet_list에 사용자가 입력한 sheet가 있는지 확인합니다.q
+for i in input_list:
+    if i in sheet_list:
+        print("입력한 sheet가 존재합니다.")
+        # data_frame에서 사용자가 입력한 sheet를 선택합니다.
+        sheet = data_frame.parse(sheet_name=i)
+        print("선택된 sheet: ", sheet)
+    else:
+        print("입력한 sheet가 존재하지 않습니다.")
+        print("사용자가 입력한 sheet: ", i)
+        print("sheet 목록: ", sheet_list)
+        print("다시 입력하세요.")
+        break    
+    
+               
