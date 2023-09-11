@@ -16,7 +16,11 @@ def select_file():
         return None
 
     # 파일 읽기
-    df = pd.read_excel(file_path)
+    # df = pd.read_excel(file_path)
+    # 특정시트만 읽을때 필요
+
+    # 전체시트 읽어오기
+    df = pd.ExcelFile(file_path)
 
     # 파일 출력
     print("불러온 데이터 : ", df)
