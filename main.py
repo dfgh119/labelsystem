@@ -7,4 +7,4 @@ import select_sheet
 data_frame = select_excel_file.select_file()
 # 사용자가 선택한 sheet 목록을 불러옵니다.
 sheet_list = select_sheet.select_sheet(data_frame)
-
+print ("선택된 시트 목록:", sheet_list)
