@@ -27,6 +27,9 @@ def select_sheet(data_frame):
     root = tk.Tk()
     root.title("시트 선택")
 
+    # 창 크기 조정
+    root.geometry("800x600")
+
     sheet_list = data_frame.sheet_names
 
     sheet_listbox = tk.Listbox(root, selectmode=tk.MULTIPLE)
